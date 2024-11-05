@@ -13,7 +13,3 @@ output "subnet" {
 output "guid" {
   value = azurerm_virtual_network.main.guid
 }
-
-output "bastion_subnet" {
-  value = azurerm_subnet.bastion.0.id
-}

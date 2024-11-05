@@ -27,13 +27,3 @@ variable "extra_tags" {
 variable "environment" {
   type = string
 }
-
-variable "enable_bastion" {
-  type    = bool
-  default = false
-}
-
-variable "bastion_subnet_address" {
-  type    = list(string)
-  default = ["192.168.1.224/27"]
-}
