@@ -8,8 +8,8 @@ resource "azurerm_virtual_network" "main" {
   dynamic "subnet" {
     for_each = zipmap(var.subnet_name, var.subnet_cidr)
     content {
-      name           = subnet.key
-      address_prefixes = subnet.value
+      name              = subnet.key
+      address_prefixes  = subnet.value
     }
   }
 
