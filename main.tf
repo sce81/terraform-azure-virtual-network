@@ -9,7 +9,7 @@ resource "azurerm_virtual_network" "main" {
     for_each = zipmap(var.subnet_name, var.subnet_cidr)
     content {
       name              = subnet.key
-      address_prefixes  = subnet.value
+      address_prefixes  = [subnet.value]
     }
   }
 
