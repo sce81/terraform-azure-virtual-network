@@ -8,7 +8,7 @@ locals {
     subnet_cidr    = var.subnet_cidr
     security_group = var.security_group
   }]
-  
+
   common_tags = tomap({
     environment = var.environment
     Terraform   = "true"
